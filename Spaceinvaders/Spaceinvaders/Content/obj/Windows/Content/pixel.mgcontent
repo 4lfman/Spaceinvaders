@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/alni03002/source/repos/Spaceinvaders/Spaceinvaders/Spaceinvaders/Content/pixel.png</SourceFile>
+  <SourceFile>C:/Users/alni03002/Source/Repos/Spaceinvaders/Spaceinvaders/Spaceinvaders/Content/pixel.png</SourceFile>
   <SourceTime>2020-10-19T10:22:18.4195028+02:00</SourceTime>
-  <DestFile>C:/Users/alni03002/source/repos/Spaceinvaders/Spaceinvaders/Spaceinvaders/Content/bin/Windows/Content/pixel.xnb</DestFile>
-  <DestTime>2020-11-02T08:51:47.130311+01:00</DestTime>
+  <DestFile>C:/Users/alni03002/Source/Repos/Spaceinvaders/Spaceinvaders/Spaceinvaders/Content/bin/Windows/Content/pixel.xnb</DestFile>
+  <DestTime>2020-11-02T10:38:04.0566296+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

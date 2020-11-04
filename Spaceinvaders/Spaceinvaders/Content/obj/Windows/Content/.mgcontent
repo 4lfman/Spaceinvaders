@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/alni03002/source/repos/Spaceinvaders/Spaceinvaders/Spaceinvaders/Content/pixel.png</File>
+    <File>C:/Users/alni03002/Source/Repos/Spaceinvaders/Spaceinvaders/Spaceinvaders/Content/pixel.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
