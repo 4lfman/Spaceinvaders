@@ -25,13 +25,13 @@ namespace Spaceinvaders
         Rectangle spaceblock4 = new Rectangle(418, 390, 1, 1);
         Rectangle pew1 = new Rectangle(100, 245, 10, 100);
         Rectangle pew2 = new Rectangle(100, 245, 10, 100);
-        Rectangle pew3 = new Rectangle(100, -150, 10, 85);
-        Rectangle pew4 = new Rectangle(100, -150, 10, 85);
+        Rectangle pew3 = new Rectangle(-200, -150, 10, 85);
+        Rectangle pew4 = new Rectangle(-200, -150, 10, 85);
         Rectangle thicc = new Rectangle(-1, 440, 1000, 1000);
 
         int x_speed = 5;
         int y_speed = 5;
-        int y2_speed = 5;
+        int y2_speed = 10;
 
 
 
@@ -158,16 +158,10 @@ namespace Spaceinvaders
                 spaceship1.X = spaceblock3.X - 20;
             if (spaceship1.Intersects(spaceblock3) || spaceship1.Intersects(spaceblock3))
                 spaceship1.X = spaceblock3.X - 20;
-
             if (pew3.Intersects(ball)) 
-            {
                 ball = new Rectangle(0, 0, 0, 10);
-            }
             else if (pew4.Intersects(ball))
-            {
                 ball = new Rectangle(10, 10, 0, 10);
-            }
-
 
 
             if (pew3.Y == 350)
@@ -196,6 +190,16 @@ namespace Spaceinvaders
             {
                 pew4.Y = 480;
             }
+
+
+            // 349 är orginalet / 246
+            if (pew3.Y >= 240)
+            {
+                pew3.X = spaceship1.X + 5;
+                pew4.X = spaceship2.X + 5;
+            }
+
+            
 
                 
             
@@ -228,6 +232,10 @@ namespace Spaceinvaders
             base.Draw(gameTime);
             spriteBatch.Begin();
             KeyboardState kstate = Keyboard.GetState();
+            if (kstate.IsKeyDown(Keys.R))
+            {
+                ball = new Rectangle(10, 10, 20, 20);
+            }
             if (kstate.IsKeyDown(Keys.Space))
             {
                 pew3.Y = 349;
@@ -242,14 +250,12 @@ namespace Spaceinvaders
                 spriteBatch.Draw(pixel, pew2, Color.Black);
                 pew1.X = spaceship1.X + 5;
                 pew2.X = spaceship2.X + 5;
-                pew3.X = spaceship1.X+5;
-                pew4.X = spaceship2.X+5;
             }
             spriteBatch.Draw(pixel, spaceship1, Color.Green);
             spriteBatch.Draw(pixel, spaceship2, Color.Green);
-            spriteBatch.Draw(pixel, right_paddle, Color.Green);
             spriteBatch.Draw(pixel, pew3, Color.Blue);
             spriteBatch.Draw(pixel, pew4, Color.Blue);
+            spriteBatch.Draw(pixel, right_paddle, Color.Green);
             spriteBatch.Draw(pixel, thicc, Color.Black);
             spriteBatch.Draw(pixel, spaceblock1, Color.Black);
             spriteBatch.Draw(pixel, spaceblock2, Color.Black);
